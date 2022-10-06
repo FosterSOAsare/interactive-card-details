@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+}
+body main.container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: "";
+  -ms-flex-align: "";
+  align-items: "";
+  position: relative;
+}
+body main.container .hero {
+  width: 30%;
+  height: 100%;
+  background-image: url("../images/bg-main-desktop.png");
+  background-size: 100% 100%;
+}
+body main.container .content {
+  width: 70%;
+  height: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body main.container .content form {
+  width: 35%;
+  height: 40%;
+}
+body main.container .content form input,
+body main.container .content form label {
+  display: block;
+  font-weight: bold;
+}
+body main.container .content form label {
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-bottom: 5px;
+  color: hsl(278deg, 68%, 11%);
+}
+body main.container .content form input {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 7px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  font-size: 12px;
+  opacity: 0.6;
+}
+body main.container .content form input:hover {
+  cursor: pointer;
+}
+body main.container .content form input:focus {
+  outline: none;
+  border: 1.5px solid hsl(278deg, 68%, 11%);
+}
+body main.container .content form p.err {
+  color: red;
+  font-size: 9px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: none;
+}
+body main.container .content form .info {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body main.container .content form .info .expiry {
+  width: 47%;
+  height: 100%;
+}
+body main.container .content form .info .expiry .inputs {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body main.container .content form .info .expiry .inputs input {
+  width: 48%;
+}
+body main.container .content form .info .cvc {
+  width: 50%;
+  height: 100%;
+}
+body main.container .content form input[type=submit] {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  background-color: hsl(278deg, 68%, 11%);
+  color: white;
+  opacity: 1;
+}
+body main.container .content .complete {
+  width: 50%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: none;
+}
+body main.container .content .complete .tick {
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body main.container .content .complete .tick img {
+  width: 100%;
+  height: 100%;
+}
+body main.container .content .complete h3 {
+  text-transform: uppercase;
+  color: hsl(278deg, 68%, 11%);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+body main.container .content .complete p {
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 0.5;
+}
+body main.container .content .complete button {
+  width: 70%;
+  margin-top: 30px;
+  color: white;
+  height: 40px;
+  background-color: hsl(278deg, 68%, 11%);
+  border: none;
+  border-radius: 5px;
+}
+body main.container .cardFront,
+body main.container .cardBack {
+  width: 300px;
+  height: 160px;
+  border-radius: 5px;
+  position: absolute;
+  top: 20vh;
+  left: 10vw;
+  background-size: 100% 100%;
+  padding: 20px;
+}
+body main.container .cardFront {
+  background-image: url("../images/bg-card-front.png");
+}
+body main.container .cardFront .top {
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body main.container .cardFront .top .img {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+}
+body main.container .cardFront .top .state {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  border: 1px solid white;
+  margin-left: 10px;
+}
+body main.container .cardFront .cardNumber {
+  color: white;
+  margin-top: 30px;
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+body main.container .cardFront .bottom {
+  width: 100%;
+  height: 20px;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+}
+body main.container .cardFront .bottom .exp {
+  letter-spacing: 2px;
+}
+body main.container .cardBack {
+  top: 50vh;
+  left: 15vw;
+  background-image: url("../images/bg-card-back.png");
+}
+body main.container .cardBack .cvc {
+  position: absolute;
+  right: 6vh;
+  top: 11.5vh;
+  font-size: 11px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  body main.container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  body main.container .hero {
+    width: 100%;
+    height: 35vh;
+  }
+  body main.container .cardBack,
+body main.container .cardFront {
+    width: 80%;
+    height: 170px;
+  }
+  body main.container .cardBack {
+    top: 5vh;
+    left: 14vw;
+  }
+  body main.container .cardBack .cvc {
+    top: 8.4vh;
+    right: 10vw;
+  }
+  body main.container .cardFront {
+    z-index: 2;
+    left: 4vw;
+  }
+  body main.container .content {
+    height: 70%;
+    width: 100%;
+    padding: 0 20px;
+  }
+  body main.container .content form {
+    width: 100%;
+    -ms-flex-item-align: start;
+    align-self: start;
+    padding-top: 10vh;
+  }
+  body main.container .content form label {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+  }
+  body main.container .content form input {
+    height: 45px;
+    font-size: 18px;
+  }
+  body main.container .content form p.err {
+    font-size: 14px;
+  }
+  body main.container .content form input[type=submit] {
+    margin-top: 30px;
+    height: 50px;
+    font-size: 16px;
+  }
+  body main.container .content form .info {
+    height: auto;
+  }
+  body main.container .content .complete {
+    width: 100%;
+    height: 60vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 40px;
+    display: none;
+  }
+  body main.container .content .complete .tick {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 40px;
+  }
+  body main.container .content .complete h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  body main.container .content .complete p {
+    font-size: 18px;
+  }
+  body main.container .content .complete button {
+    height: 60px;
+    width: 90%;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top: 50px;
+  }
+}

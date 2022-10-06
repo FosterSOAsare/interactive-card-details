@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@mixin flex($justify, $align) {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: $justify;
+	-ms-flex-pack: $justify;
+	justify-content: $justify;
+	-webkit-box-align: $align;
+	-ms-flex-align: $align;
+	align-items: $align;
+}
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: "Space Grotesk", sans-serif;
+}
+body {
+	width: 100%;
+	height: 100vh;
+	max-height: 100vh;
+	main.container {
+		width: 100%;
+		height: 100%;
+		@include flex(space-between, "");
+		position: relative;
+		.hero {
+			width: 30%;
+			height: 100%;
+			background-image: url("../images/bg-main-desktop.png");
+			background-size: 100% 100%;
+		}
+		.content {
+			width: 70%;
+			height: 100%;
+			background-color: white;
+			@include flex(center, center);
+			form {
+				width: 35%;
+				height: 40%;
+
+				// display: none;
+				input,
+				label {
+					display: block;
+					font-weight: bold;
+				}
+				label {
+					text-transform: uppercase;
+					font-size: 10px;
+					margin-bottom: 5px;
+					color: hsl(278, 68%, 11%);
+				}
+				input {
+					margin-bottom: 20px;
+					width: 100%;
+					height: 30px;
+					padding: 0 10px;
+					border-radius: 7px;
+					border: 1px solid hsl(270, 3%, 87%);
+					font-size: 12px;
+					opacity: 0.6;
+
+					&:hover {
+						cursor: pointer;
+					}
+					&:focus {
+						outline: none;
+						border: 1.5px solid hsl(278, 68%, 11%);
+					}
+				}
+				p.err {
+					color: red;
+					font-size: 9px;
+					margin-top: -15px;
+					margin-bottom: 10px;
+					font-weight: bold;
+					display: none;
+				}
+				.info {
+					width: 100%;
+					height: 50px;
+					margin-top: 20px;
+					@include flex(space-between, center);
+					.expiry {
+						width: 47%;
+						height: 100%;
+						.inputs {
+							width: 100%;
+							height: 100%;
+							@include flex(space-between, center);
+							input {
+								width: 48%;
+							}
+						}
+					}
+					.cvc {
+						width: 50%;
+						height: 100%;
+						// background-color: green;
+					}
+				}
+				input[type="submit"] {
+					width: 100%;
+					height: 40px;
+					margin-top: 20px;
+					background-color: hsl(278, 68%, 11%);
+					color: white;
+					opacity: 1;
+				}
+			}
+			.complete {
+				width: 50%;
+				height: 50vh;
+
+				@include flex(center, center);
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				display: none;
+				.tick {
+					width: 50px;
+					height: 50px;
+					margin: 20px auto;
+					@include flex(center, center);
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				h3 {
+					text-transform: uppercase;
+					color: hsl(278, 68%, 11%);
+					margin-bottom: 10px;
+					letter-spacing: 2px;
+				}
+				p {
+					// color: hsl(270, 3%, 87%);
+					font-size: 12px;
+					font-weight: bold;
+					opacity: 0.5;
+				}
+				button {
+					width: 70%;
+					margin-top: 30px;
+					color: white;
+					height: 40px;
+					background-color: hsl(278, 68%, 11%);
+					border: none;
+					border-radius: 5px;
+				}
+			}
+		}
+		.cardFront,
+		.cardBack {
+			width: 300px;
+			height: 160px;
+			border-radius: 5px;
+			position: absolute;
+			top: 20vh;
+			left: 10vw;
+			background-size: 100% 100%;
+			padding: 20px;
+		}
+		.cardFront {
+			background-image: url("../images/bg-card-front.png");
+			.top {
+				width: 100%;
+				height: 40px;
+				@include flex(flex-start, center);
+				.img {
+					width: 30px;
+					height: 30px;
+					background-color: white;
+					border-radius: 50%;
+				}
+				.state {
+					border-radius: 50%;
+					height: 15px;
+					width: 15px;
+					border: 1px solid white;
+					margin-left: 10px;
+				}
+			}
+			.cardNumber {
+				color: white;
+				margin-top: 30px;
+				letter-spacing: 3px;
+				font-size: 18px;
+			}
+			.bottom {
+				width: 100%;
+				height: 20px;
+				margin-top: 15px;
+				@include flex(space-between, center);
+				font-size: 10px;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				color: white;
+				.exp {
+					letter-spacing: 2px;
+				}
+			}
+		}
+		.cardBack {
+			top: 50vh;
+			left: 15vw;
+			background-image: url("../images/bg-card-back.png");
+			.cvc {
+				position: absolute;
+				right: 6vh;
+				top: 11.5vh;
+				font-size: 11px;
+				color: white;
+				letter-spacing: 2px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		main.container {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			.hero {
+				width: 100%;
+				height: 35vh;
+			}
+			.cardBack,
+			.cardFront {
+				width: 80%;
+				height: 170px;
+			}
+			.cardBack {
+				top: 5vh;
+				left: 14vw;
+				.cvc {
+					top: 8.4vh;
+					right: 10vw;
+				}
+			}
+			.cardFront {
+				z-index: 2;
+				left: 4vw;
+			}
+			.content {
+				height: 70%;
+				width: 100%;
+				padding: 0 20px;
+				form {
+					width: 100%;
+					-ms-flex-item-align: start;
+					align-self: start;
+					padding-top: 10vh;
+					label {
+						font-size: 16px;
+						letter-spacing: 1px;
+						margin-bottom: 7px;
+					}
+					input {
+						height: 45px;
+						font-size: 18px;
+					}
+					p.err {
+						font-size: 14px;
+					}
+					input[type="submit"] {
+						margin-top: 30px;
+						height: 50px;
+						font-size: 16px;
+					}
+					.info {
+						height: auto;
+					}
+				}
+				.complete {
+					width: 100%;
+					height: 60vh;
+					@include flex(flex-start, center);
+					padding-top: 40px;
+					display: none;
+					.tick {
+						width: 80px;
+						height: 80px;
+						margin-bottom: 40px;
+					}
+					h3 {
+						font-size: 32px;
+						margin-bottom: 20px;
+					}
+					p {
+						font-size: 18px;
+					}
+
+					button {
+						height: 60px;
+						width: 90%;
+						border-radius: 8px;
+						font-size: 18px;
+						margin-top: 50px;
+					}
+				}
+			}
+		}
+	}
+}

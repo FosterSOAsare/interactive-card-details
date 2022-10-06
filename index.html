@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="./images/favicon-32x32.png" />
+
+		<title>Frontend Mentor | Interactive card details form</title>
+
+		<link rel="stylesheet" href="./css/styles.css" />
+	</head>
+	<body>
+		<main class="container">
+			<div class="hero"></div>
+			<div class="content">
+				<form action="">
+					<label for="cardHolder">CardHolder Name</label>
+					<input
+						type="text"
+						id="cardHolder"
+						name="cardHolder"
+						placeholder="e.g. Jane Appleseed"
+					/>
+					<p class="err nameErr"></p>
+					<label for="cardNumber">Card Number</label>
+					<input
+						type="text"
+						id="cardNumber"
+						name="cardNumber"
+						placeholder="e.g. 1234 5678 9123 0000"
+					/>
+					<p class="err cardNumberErr"></p>
+					<div class="info">
+						<div class="expiry">
+							<label for="">EXP. DATE (MM/YY)</label>
+							<div class="inputs">
+								<input
+									type="text"
+									id="month"
+									placeholder="MM"
+									name="month"
+								/>
+								<input
+									type="text"
+									id="year"
+									placeholder="YY"
+									name="year"
+								/>
+							</div>
+							<p class="err expErr"></p>
+						</div>
+						<div class="cvc">
+							<label for="">CVC</label>
+							<input
+								type="text"
+								id="cvc"
+								placeholder="e.g. 123"
+								name="cvc"
+							/>
+							<p class="err cvcErr">CVC</p>
+						</div>
+					</div>
+					<input type="submit" value="Confirm" />
+				</form>
+				<div class="complete">
+					<div class="tick">
+						<img src="./images/icon-complete.svg" alt="" />
+					</div>
+					<h3>Thank you!</h3>
+					<p>We've added your credit card details</p>
+					<button>Continue</button>
+				</div>
+			</div>
+			<div class="cardFront">
+				<div class="top">
+					<div class="img"></div>
+					<div class="state"></div>
+				</div>
+				<div class="cardNumber">0000 0000 0000 0000</div>
+				<div class="bottom">
+					<div class="name">Jane Appleseed</div>
+					<div class="exp">
+						<span class="month">00</span>
+						/ <span class="year">00</span>
+					</div>
+				</div>
+			</div>
+			<div class="cardBack">
+				<div class="cvc">000</div>
+			</div>
+		</main>
+		<script src="./app.js"></script>
+	</body>
+</html>
