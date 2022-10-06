@@ -89,5 +89,5 @@ let check = arr.every((e) => {
 
 ## Author
 
--   Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/scyre27)
--   Twitter - [@yourusername](https://www.twitter.com/scyre27)
+-   Frontend Mentor - [@scyre27](https://www.frontendmentor.io/profile/scyre27)
+-   Twitter - [@scyrety](https://www.twitter.com/scyrety)
