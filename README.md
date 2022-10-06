@@ -1,8 +1,9 @@
 # Frontend Mentor - Interactive card details form solution
 
 This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
-[Video of how it works](./images/bandicam%202022-10-06%2013-15-57-718.jpg)
+![Mobile display](./images/mobile.jpg)
+![Desktop display](./images/desktop.jpg)
+![Video of how it works](./images/video.mp4)
 
 ## Table of contents
 
@@ -46,7 +47,7 @@ Users should be able to:
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-### HOW it works
+### How it works
 
 Javascript is used to validate form . How?
 
@@ -74,11 +75,11 @@ if (name == "" && number == "" && cvc == "" && month == "" && year == "") {
 
 -   When form is submitted , all error messages are fetched and with Js' every method , we check if all error messages have a display of none, if so display success message
 
-```
+```js
 let check = arr.every((e) => {
-			let style = getComputedStyle(e);
-			return style.display == "none";
-		});
+	let style = getComputedStyle(e);
+	return style.display == "none";
+});
 ```
 
 ## Author
